@@ -1,0 +1,30 @@
+<!-- Conditionally render favorite job items if the favoriteJobsList has items -->
+<ng-container *ngIf="favoriteJobsList?.length; else noFavorites">
+  <!-- Iterate over each favorite job item -->
+  <ng-container *ngFor="let favoriteJob of favoriteJobsList">
+    <!-- Container for each job item -->
+    <div class="jobs-container">
+      <!-- Company information section -->
+      <div class="company-info">
+        <!-- Company logo -->
+        <div class="company-logo mr-1">
+          <img id="companyLogo" width="70" height="70" alt="companyLogo" [src]="favoriteJob.companyLogo" />
+        </div>
+        <!-- Company name, title, and reference -->
+        <div class="company-name">
+          <!-- Job title with click event to navigate to job details -->
+          <p class="title" (click)="goToJobDetails(favoriteJob.id)">{{ favoriteJob.title }}</p>
+          <!-- Company name -->
+          <span><b class="name">Company:</b> {{ favoriteJob.companyName }}</span>
+          <!-- Job reference -->
+          <span class="reference"><b class="name">Reference:</b> {{ favoriteJob.reference }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<!-- Template for rendering when no favorite jobs are available -->
+<ng-template #noFavorites>
+  <div class="empty-data-container">No Record Found</div>
+</ng-template>

@@ -1,0 +1,42 @@
+/* 
+Specification:
+This CSS file defines styles for specific elements/classes used in the application's UI.
+*/
+
+/* Styles for the main container of the application */
+.main-container {
+  margin: 1rem 5rem; /* Provides margin around the main content */
+}
+
+/* Styles for titles/headings */
+.title {
+  display: flex; /* Makes the title container a flex container */
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
+  margin-bottom: 1rem; /* Adds margin at the bottom */
+  font-weight: bold; /* Makes the text bold */
+}
+
+/* Styles for active elements */
+.active {
+  background-color:#87d1db !important; /* Sets a specific background color for active elements */
+}
+
+/* Styles for tabs */
+#tabs li {
+  float: left; /* Floats the list items to the left */
+  list-style: none; /* Removes default list styles */
+  text-align: center; /* Centers the text horizontally */
+  background-color: #bdd3d6; /* Sets background color for tabs */
+  margin-right: 30px; /* Adds margin to the right of each tab */
+  width: 45%; /* Sets width for each tab */
+  line-height: 70px; /* Sets line height for text inside tabs */
+}
+
+/* Styles for tab links */
+#tabs li a {
+  text-decoration: none; /* Removes underline from links */
+  color: black; /* Sets text color for links */
+  display: block; /* Displays links as block elements */
+  font-weight: bold; /* Makes the text bold */
+}

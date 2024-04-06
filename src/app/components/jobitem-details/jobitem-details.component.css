@@ -1,0 +1,69 @@
+/* Define styles for the container holding job details */
+.jobs-container {
+  width: 90%; /* Set width to 90% of the parent container */
+  margin: 1rem 2rem; /* Set margin to 1rem on top and bottom, 2rem on left and right */
+}
+
+/* Define styles for the company info section */
+.company-info {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  width: 80%; /* Set width to 80% of the parent container */
+}
+
+/* Define styles for the favorite section */
+.favorite-section {
+  width: 20%; /* Set width to 20% of the parent container */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Horizontally center content */
+}
+
+/* Define styles for job titles */
+.title {
+  margin-bottom: 0.5rem; /* Set margin bottom to 0.5rem */
+  font-weight: bold; /* Apply bold font weight */
+}
+
+/* Define styles for generic names */
+.name {
+  margin-right: 0.5rem; /* Set margin right to 0.5rem */
+}
+
+/* Define styles for references */
+.reference {
+  margin-left: 0.5rem; /* Set margin left to 0.5rem */
+}
+
+/* Define styles for margin right of 1rem */
+.mr-1 {
+  margin-right: 1rem; /* Set margin right to 1rem */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Horizontally center content */
+}
+
+/* Define styles for active elements */
+.active {
+  color: rgb(234, 25, 25); /* Set text color to red */
+}
+
+/* Define styles for clickable elements */
+.icon-star {
+  cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+/* Define styles for back button */
+.back {
+  margin-bottom: 2rem; /* Set margin bottom to 2rem */
+  cursor: pointer; /* Set cursor to pointer on hover */
+  font-size: 20px; /* Set font size to 20px */
+}
+
+/* Define styles for active back button */
+.active-back {
+  color: black; /* Set text color to black */
+  cursor: pointer; /* Set cursor to pointer on hover */
+  font-style: normal; /* Remove italic font style */
+  font-weight: bold; /* Apply bold font weight */
+}

@@ -1,0 +1,48 @@
+/* Define styles for the container holding job details */
+.jobs-container {
+  width: 90%; /* Set width to 90% of the parent container */
+  margin: 1rem 2rem; /* Set margin to 1rem on top and bottom, 2rem on left and right */
+  display: flex; /* Use flexbox layout */
+}
+
+/* Define styles for the company info section */
+.company-info {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  width: 80%; /* Set width to 80% of the parent container */
+}
+
+/* Define styles for job titles */
+.title {
+  margin-bottom: 0.5rem; /* Set margin bottom to 0.5rem */
+  font-weight: bold; /* Apply bold font weight */
+  cursor: pointer; /* Set cursor to pointer on hover */
+}
+
+/* Define styles for generic names */
+.name {
+  margin-right: 0.5rem; /* Set margin right to 0.5rem */
+}
+
+/* Define styles for references */
+.reference {
+  margin-left: 0.5rem; /* Set margin left to 0.5rem */
+}
+
+/* Define styles for margin right of 1rem */
+.mr-1 {
+  margin-right: 1rem; /* Set margin right to 1rem */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Horizontally center content */
+}
+
+/* Define styles for the empty data container */
+.empty-data-container {
+  width: 90%; /* Set width to 90% of the parent container */
+  margin-top: 10rem; /* Set margin top to 10rem */
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Horizontally center content */
+  font-weight: bold; /* Apply bold font weight */
+}

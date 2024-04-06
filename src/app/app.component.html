@@ -1,0 +1,27 @@
+<!-- This div serves as the main container for the content -->
+<div class="main-container">
+  
+  <!-- This heading provides a title for the section -->
+  <h3 class="title">Find Your Job</h3>
+  
+  <!-- This unordered list contains the navigation tabs -->
+  <ul id="tabs">
+    
+    <!-- This list item represents the "JOBS" tab -->
+    <li>
+      <!-- This anchor tag links to the "/jobs" route and is styled based on its active state -->
+      <a [routerLink]="['/jobs']" routerLinkActive="active">JOBS</a>
+    </li>
+    
+    <!-- This list item represents the "FAVORITES" tab -->
+    <li>
+      <!-- This anchor tag links to the "/favorites" route and is styled based on its active state -->
+      <a [routerLink]="['/favorites']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">FAVORITES</a>
+    </li>
+    
+  </ul>
+  
+  <!-- This router-outlet is a placeholder for rendering the content of the selected route -->
+  <router-outlet></router-outlet>
+  
+</div>

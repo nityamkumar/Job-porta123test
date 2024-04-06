@@ -1,0 +1,85 @@
+<!-- Display job details if jobInfo exists -->
+<ng-container *ngIf="jobInfo?.id">
+
+  <!-- Container for job details -->
+  <div class="jobs-container">
+    
+    <!-- Back button -->
+    <div class="back">
+      <!-- Back button icon -->
+      <i class="bi bi-house-door-fill active-back" (click)="goToJobs()">Back</i>
+    </div>
+    
+    <!-- Company Info section -->
+    <div class="company-info">
+      
+      <!-- Company Logo -->
+      <div class="company-logo mr-1">
+        <!-- Display company logo -->
+        <img id="companyLogo" width="70" height="70" alt="companyLogo" [src]="jobInfo.companyLogo" />
+      </div>
+      
+      <!-- Company Name and Details -->
+      <div class="company-name">
+        
+        <!-- Job Title -->
+        <p class="title">{{ jobInfo.title }}</p>
+        
+        <!-- Job Types -->
+        <ng-container *ngFor="let type of jobInfo.types">
+          <!-- Display job types -->
+          <span class="name"><b>{{ type }} </b></span>
+        </ng-container>
+        
+        <!-- Job Industries -->
+        <ng-container *ngFor="let industry of jobInfo.industries">
+          <!-- Display job industries -->
+          <span class="name"><b>{{ industry }}</b></span>
+        </ng-container>
+        
+      </div>
+    </div>
+
+    <!-- Other Company Info -->
+    <div class="company-other-info">
+      
+      <!-- Company Name -->
+      <p class="title">
+        <!-- Display company name -->
+        <b class="name">Company:</b> {{ jobInfo.companyName }}
+      </p>
+      
+      <!-- Publish Date -->
+      <p class="title">
+        <!-- Display publish date -->
+        <b class="name">Publish date:</b>{{ jobInfo.publishDate | date : "MM/dd/yy" }}
+      </p>
+      
+      <!-- Location -->
+      <p class="title"><b class="name">Location:</b>{{ jobInfo.location }}</p>
+      
+      <!-- Reference -->
+      <p class="title"><b class="name">Reference:</b>{{ jobInfo.reference }}</p>
+      
+      <!-- Description -->
+      <p class="title">
+        <b class="name">Description:</b>
+      </p>
+      
+      <!-- Display job description with HTML -->
+      <div [innerHTML]="jobInfo.description"></div>
+    </div>
+  </div>
+</ng-container>
+
+<!-- Code Specification -->
+<!-- 
+  This template is designed to display detailed information about a job.
+  - It utilizes Angular structural directives such as *ngIf and *ngFor to conditionally render elements and loop through arrays.
+  - The job details are populated dynamically using data binding with properties from the jobInfo object.
+  - The jobInfo object is assumed to contain properties such as id, title, types, industries, companyName, publishDate, location, reference, and description.
+  - The job description is rendered as HTML using [innerHTML].
+  - The Back button has a click event binding to the goToJobs() method.
+
+  Additional specifications or explanations can be added depending on the specific implementation details, data source, or Angular features used.
+-->

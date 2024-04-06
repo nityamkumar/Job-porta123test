@@ -1,0 +1,29 @@
+<!-- Iterate over each job in the jobsList array -->
+<ng-container *ngFor="let job of jobsList">
+  <!-- Container for each job item -->
+  <div class="jobs-container">
+    <!-- Company information section -->
+    <div class="company-info">
+      <!-- Company logo section -->
+      <div class="company-logo mr-1">
+        <!-- Display company logo -->
+        <img id="companyLogo" width="70" height="70" alt="companyLogo" [src]="job.companyLogo" />
+      </div>
+      <!-- Company name and job title section -->
+      <div class="company-name">
+        <!-- Job title with click event to navigate to job details -->
+        <p class="title" (click)="goToJobDetails(job.id)">{{ job.title }}</p>
+        <!-- Display company name -->
+        <span><b class="name">Company:</b> {{ job.companyName }}</span>
+        <!-- Display job reference -->
+        <span class="reference"><b class="name">Reference:</b> {{ job.reference }}</span>
+      </div>
+    </div>
+    <!-- Favorite section -->
+    <div class="favorite-section">
+      <!-- Star icon for adding to favorites -->
+      <i class="bi bi-star-fill icon-star" id="star-{{ job.id }}" (click)="addToFavorite(job)"
+        [ngClass]="{ active: job?.isFavorite }"></i>
+    </div>
+  </div>
+</ng-container>
